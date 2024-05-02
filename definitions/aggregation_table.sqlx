@@ -1,2 +1,0 @@
-config { type: "table" }
--- SELECT * FROM ${ref("source_table")} WHERE id IS NULL
