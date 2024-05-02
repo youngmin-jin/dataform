@@ -9,9 +9,9 @@ config {
 }
 SELECT 
     "a" AS id
-    1 AS number
+    , 1 AS number
 UNION ALL
 SELECT 
     "b" AS id
-    3 AS number
+    , 3 AS number
 
