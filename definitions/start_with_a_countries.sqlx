@@ -1,5 +1,5 @@
 select *
 from ${ref("country_codes")}
-limit 10
+where country_name like 'A%'
 
 
