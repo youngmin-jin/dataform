@@ -1,5 +1,5 @@
 {
-    "defaultSchema": "dataform",
+    "defaultSchema": "dataform_raw",
     "assertionSchema": "dataform_transformed",
     "warehouse": "bigquery",
     "defaultDatabase": "maximal-chemist-416406",
