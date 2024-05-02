@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  database: "maximal-chemist-416406",
+  schema: "dataform_raw",
+  name: "country_codes",
+}
