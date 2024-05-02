@@ -1,5 +1,2 @@
-config {
-    type: "table",
-    description: "Description of the first table."
-}
-SELECT SUM(number) AS total FROM ${ref("source_table")}
+config { type: "assertion" }
+SELECT * FROM ${ref("source_table")} WHERE id IS NULL
