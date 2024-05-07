@@ -1,5 +1,8 @@
 config { type: "table" }
-select * 
+select a.date
+        , a.country_iso_code_2
+        , a.airport_name
+        , c.region_geom
 from ${ref("airport_traffic")} as a
     join ${ref("commercial_traffic")} as c on a.country_iso_code_2 = c.country_iso_code_2
 limit 100
