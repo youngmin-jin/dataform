@@ -1,5 +1,5 @@
 config{
-    type: "declaration",
+    type: "table",
     database: "bigquery-public-data",
     schema: "covid19_geotab_mobility_impact",
     name: "airport_traffic"
