@@ -1,8 +1,18 @@
-config {
-    type: "table"
-}
+-- config {
+--     type: "table"
+-- }
+
+with a as (
+    select * from ref('airport_traffic')
+),
+with c as (
+    select * from ref('commercial_traffic')
+)
+-- select *
+-- from a
+--     join c using(country_iso_code_2)
+-- limit 100
 
 select *
-from ${ref("commercial_traffic")}
-
+from c
 
