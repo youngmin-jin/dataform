@@ -1,6 +1,8 @@
-config {
-    type: "declaration",
-    database: "bigquery-public-data",
-    schema: "covid19_geotab_mobility_impact",
-    name: "airport_traffic"
-}
+-- config {
+--     type: "declaration",
+--     database: "bigquery-public-data",
+--     schema: "covid19_geotab_mobility_impact",
+--     name: "airport_traffic"
+-- }
+select *
+from `bigquery-public-data`.covid19_geotab_mobility_impact.airport_traffic
