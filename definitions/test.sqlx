@@ -3,10 +3,10 @@
 -- }
 
 with a as (
-    select * from ref('airport_traffic')
+    select * from {{ ref('airport_traffic') }}
 ),
 with c as (
-    select * from ref('commercial_traffic')
+    select * from {{ ref('commercial_traffic') }}
 )
 -- select *
 -- from a
