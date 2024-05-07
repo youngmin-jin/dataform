@@ -1,5 +1,8 @@
-config {type:"table"}
+config {
+    type: "table"
+}
+
 select *
-from ref("airport_traffic","commercial_traffic")
-limit 100
+from ${ref("commercial_traffic")}
+
 
