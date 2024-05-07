@@ -1,0 +1,4 @@
+config {type:"table"}
+select *
+from ${ref("airport_traffic")}
+
