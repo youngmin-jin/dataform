@@ -1,18 +1,17 @@
--- config {
---     type: "table"
--- }
-
-with a as (
-    select * from {{ ref('airport_traffic') }}
-),
-with c as (
-    select * from {{ ref('commercial_traffic') }}
-)
+-- with a as (
+--     select * from {{ ref('airport_traffic') }}
+-- ),
+-- with c as (
+--     select * from {{ ref('commercial_traffic') }}
+-- ),
+-- with final as (
+--     select *
+--     from a
+--         join c using(country_iso_code_2)
+--     limit 100
+-- )
 -- select *
--- from a
---     join c using(country_iso_code_2)
--- limit 100
+-- from final
 
-select *
-from c
-
+config { type: "table" }
+select * from ${ref("airport_traffic")}
