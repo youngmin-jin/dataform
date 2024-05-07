@@ -1,17 +1,5 @@
--- with a as (
---     select * from {{ ref('airport_traffic') }}
--- ),
--- with c as (
---     select * from {{ ref('commercial_traffic') }}
--- ),
--- with final as (
---     select *
---     from a
---         join c using(country_iso_code_2)
---     limit 100
--- )
--- select *
--- from final
-
 config { type: "table" }
-select * from ${ref("airport_traffic")}
+select * 
+from ${ref("airport_traffic")} as a
+    join ${ref("commercial_traffic")} as c on a.country_iso_code_2 = c.country_iso_code_2
+limit 100

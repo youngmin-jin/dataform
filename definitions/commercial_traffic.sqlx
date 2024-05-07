@@ -4,5 +4,3 @@ config {
     schema: "covid19_geotab_mobility_impact",
     name: "commercial_traffic",
 }
--- select *
--- from `bigquery-public-data`.covid19_geotab_mobility_impact.commercial_traffic
