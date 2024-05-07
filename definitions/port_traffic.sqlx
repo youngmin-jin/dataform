@@ -1,4 +1,4 @@
-config{
+config {
     type: "declaration",
     database: "bigquery-public-data",
     schema: "covid19_geotab_mobility_impact",
