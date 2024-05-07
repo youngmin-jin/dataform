@@ -2,4 +2,4 @@ config {type:"table"}
 select *
 from ${ref("airport_traffic")} a
     join ${ref("commercial_traffic")} c on a.country_iso_code_2 = c.country_iso_code_2
-limit 100
+
