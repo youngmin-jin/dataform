@@ -4,13 +4,13 @@ select *
 from(select mon
                 , country
                 , sum_confirmed_cases
-        from $ref{("covid")}
+        from {{ ref('covid') }}
         where sum_confirmed_cases_rank = 1
 ) as c
 join (select mon
                 , country
                 , sum_deaths
-        from $ref{("covid")}
+        from {{ ref('covid') }}
         where sum_deaths_rank = 1
 ) as d on c.mon = d.mon 
 order by c.mon 
