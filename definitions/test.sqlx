@@ -8,6 +8,10 @@ config { type: "table" }
 -- limit 100
 
 select trip_direction
-from ${ref()
+        , count(*) cnt
+from ${ref("us_border_volumes")}
+group by trip_direction
+
+
 
 

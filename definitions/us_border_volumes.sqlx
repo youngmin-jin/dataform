@@ -2,5 +2,5 @@ config {
     type: "declaration",
     database: "bigquery-public-data",
     schema: "covid19_geotab_mobility_impact",
-    name: "us_border_volumnes"
+    name: "us_border_volumes"
 }
