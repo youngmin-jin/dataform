@@ -5,6 +5,8 @@
 --     name: "covid_19_geographic_distribution_worldwide"
 -- }
 
+config {type: "table"}
+
 select *
         , dense_rank() over(partition by mon order by sum_confirmed_cases desc) as sum_confirmed_cases_rank
         , case when sum_deaths!= 0 then dense_rank() over(partition by mon order by sum_deaths desc) 
