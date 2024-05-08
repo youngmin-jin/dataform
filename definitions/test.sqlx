@@ -1,17 +1,14 @@
 config { type: "table" }
--- select a.date
---         , a.country_iso_code_2
---         , a.airport_name
---         , c.region_geom
--- from ${ref("airport_traffic")} as a
---     join ${ref("commercial_traffic")} as c on a.country_iso_code_2 = c.country_iso_code_2
--- limit 100
 
-select trip_direction
-        , count(*) cnt
-from ${ref("us_border_volumes")}
-group by trip_direction
+-- select date_trunc(date, MONTH) as mon
+--         , airport_name
+--         , avg(percent_of_baseline) as avg_percent_of_baseline
+-- from ${ref("airport_traffic")}
+-- where (date_trunc(date, MONTH) = '2020-08-01' 
+--         or date_trunc(date, MONTH) = '2021-08-01')
+--         and airport_name = 'Kingsford Smith'
+-- group by mon
+--         , airport_name
+-- order by mon asc
 
-
-
-
+select 
