@@ -17,8 +17,10 @@ from (
                 , countries_and_territories as country
                 , sum(daily_confirmed_cases) as sum_confirmed_cases
                 , sum(deaths) as sum_deaths
+                , avg(pop_data_2019) as pop_data_2019
         from `bigquery-public-data`.covid19_ecdc.covid_19_geographic_distribution_worldwide
         group by mon
                 , country
+        having pop_data_2019 > 0
 ) t
 order by mon
