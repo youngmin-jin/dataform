@@ -7,12 +7,7 @@
 
 config {type: "table"}
 
-select mon
-        , country
-        , sum_confirmed_cases
-        , case when sum_deaths != 0 then sum_deaths 
-                else null
-          end as sum_deaths
+select *
         , dense_rank() over(partition by mon order by sum_confirmed_cases desc) as sum_confirmed_cases_rank
         , case when sum_deaths!= 0 then dense_rank() over(partition by mon order by sum_deaths desc) 
                 else 0
