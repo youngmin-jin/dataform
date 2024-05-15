@@ -23,4 +23,3 @@ from (
                 , country
         having pop_data_2019 > 0
 ) t
-order by mon
